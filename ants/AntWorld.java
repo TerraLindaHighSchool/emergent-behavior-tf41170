@@ -19,4 +19,13 @@ public class AntWorld extends World
         super(SIZE, SIZE, 1);
         setPaintOrder(Ant.class, AntHill.class);
     }
+    
+    public void act()
+    {
+        if(getObjects(Food.class).size() == 0)
+        {
+            Greenfoot.stop();
+        }
+    }
+
 }
